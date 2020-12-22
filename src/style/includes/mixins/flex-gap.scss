@@ -1,0 +1,23 @@
+@mixin flex-gap($x, $y: $x) {
+  @include margin-x(-#{$x / 2});
+
+  margin-bottom: -$y;
+
+  > * {
+    @include margin-x(#{$x / 2});
+    margin-bottom: $y;
+  }
+}
+
+
+@mixin flex-gap-arr($arr) {
+  @each $bp-name, $val in $arr {
+    @if ($bp-name == 'mob') {
+      @include flex-gap($val...);
+    } @else {
+      @media #{min-width-for($bp-name)} {
+        @include flex-gap($val...);
+      }
+    }
+  }
+}

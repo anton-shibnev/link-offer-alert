@@ -1,0 +1,17 @@
+%ul-list {
+  @include list-reset();
+
+  li {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      @include circle(6px);
+      content: '';
+      background-color: $black;
+      display: block;
+      margin-right: 14px;
+      flex-shrink: 0;
+    }
+  }
+}

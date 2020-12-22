@@ -1,0 +1,29 @@
+html {
+  color: $black;
+  font-size: $font-size;
+  font-family: $font-family;
+  line-height: $line-height;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  @include margin-y(0, 20px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  color: tomato;
+}

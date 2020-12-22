@@ -1,0 +1,18 @@
+// trs
+$trs: 0.2s;
+$trs-med: $trs * 2;
+$trs-long: $trs * 4;
+
+$border-radius: 5px;
+
+$header-height: (
+  'mob': 74px,
+  'xs': 64px,
+  'lg': 100px
+);
+
+$gap: (
+  'mob': 10px,
+  'xs': 10px,
+  'lg': 10px,
+);

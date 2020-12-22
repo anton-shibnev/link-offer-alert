@@ -1,0 +1,16 @@
+@mixin btn-behavior($bg, $color, $bgDef: false, $colorDef: false) {
+  transition: background-color $trs, color $trs;
+  background-color: $bg;
+  color: $color;
+
+  @if ($bgDef) {
+    &:hover {
+      background-color: $bgDef;
+      color: $colorDef;
+    }
+    &:active { background-color: darken($bgDef, 5); }
+  } @else {
+    &:hover { background-color: darken($bg, 5); }
+    &:active { background-color: darken($bg, 10); }
+  }
+}

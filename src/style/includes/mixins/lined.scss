@@ -1,0 +1,18 @@
+@mixin lined($c: #000, $h: 2px, $switch: 'off'){
+  background-image: linear-gradient(to right,$c 0,$c 100%);
+  display: inline;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.55s cubic-bezier(.2,.75,.5,1), color 0.5s ease;
+  width: max-content;
+
+  @if ($switch == 'off') {
+    background-size: 0 $h;
+
+    &:hover { background-size: 100% $h; }
+  } @else {
+    background-size: 100% $h;
+
+    &:hover { background-size: 0 $h; }
+  }
+}

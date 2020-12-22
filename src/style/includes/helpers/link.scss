@@ -1,0 +1,8 @@
+%link-dark {
+  color: $black;
+  transition: color $trs;
+
+  &:hover {
+    color: $primary;
+  }
+}

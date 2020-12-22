@@ -1,0 +1,11 @@
+$bp: (
+  'mob': 10px,
+  'xs': 1024px,
+  'lg': 1920px,
+);
+
+@function min-width-for($width-name) {
+  $width: map-get($bp, $width-name);
+
+  @return 'only screen and (min-width: #{$width})';
+}
